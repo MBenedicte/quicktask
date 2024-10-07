@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const port = 3500;
 
+require("dotenv").config();
+
+const port = process.env.PORT;
 app.use(cors());
 
 app.get("/api/welcome", (req, res) => {
