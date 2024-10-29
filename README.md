@@ -1,4 +1,4 @@
-# quicktask overview
+# Quicktask overview
 
 Quicktask isa user-friendly task management tool designed to help individuals and teams organize their tasks efficiently. With a clean interface and robust features, the app aims to enhance productivity by enabling users to create, prioritize, and track their to-do lists effortlessly. This application allows yoindividual to create a list of tasks to work on everyday which makes it easier to know the progress towards the daily goal. Before creating a list, you need to register on the app if you don’t currently have an account and then after you can start your list or manipulate the one you have already created by mentioning the progress of the tasks.
 
