@@ -11,9 +11,8 @@ module.exports = (sequelize, DataTypes) => {
   List.init(
     {
       list_id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.UUID,
         primaryKey: true,
-        autoIncrement: true,
       },
       user_id: {
         type: DataTypes.INTEGER,

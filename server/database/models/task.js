@@ -10,10 +10,9 @@ module.exports = (sequelize, DataTypes) => {
   }
   Task.init(
     {
-      task_id: {
-        type: DataTypes.INTEGER,
+      uuid: {
+        type: DataTypes.UUID,
         primaryKey: true,
-        autoIncrement: true,
       },
       user_id: {
         type: DataTypes.INTEGER,

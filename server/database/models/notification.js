@@ -10,9 +10,8 @@ module.exports = (sequelize, DataTypes) => {
   Notification.init(
     {
       notification_id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.UUID,
         primaryKey: true,
-        autoIncrement: true,
       },
       user_id: {
         type: DataTypes.INTEGER,
