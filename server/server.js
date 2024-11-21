@@ -35,12 +35,12 @@ const onError = (error) => {
 server.on("error", onError);
 
 // Error Handling
-process.on("unhandledRejection", (reason, promise) => {
-  logger.error("Unhandled Rejection:", reason);
-});
-process.on("uncaughtException", (error) => {
-  logger.error("Uncaught Exception:", error);
-  process.exit(1);
-});
+// process.on("unhandledRejection", (reason, promise) => {
+//   logger.error("Unhandled Rejection:", reason);
+// });
+// process.on("uncaughtException", (error) => {
+//   logger.error("Uncaught Exception:", error);
+//   process.exit(1);
+// });
 
 server.on("listening", () => console.log("Listening to port =>", port));
