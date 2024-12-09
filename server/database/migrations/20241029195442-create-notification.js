@@ -3,26 +3,25 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable("notifications", {
-      notification_id: {
-        type: Sequelize.INTEGER,
+      id: {
+        type: Sequelize.UUID,
         primaryKey: true,
-        autoIncrement: true,
       },
       user_id: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.UUID,
         allowNull: false,
         references: {
           model: "users",
-          key: "user_id",
+          key: "id",
         },
         onDelete: "CASCADE",
       },
       task_id: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.UUID,
         allowNull: true,
         references: {
           model: "tasks",
-          key: "task_id",
+          key: "id",
         },
         onDelete: "CASCADE",
       },

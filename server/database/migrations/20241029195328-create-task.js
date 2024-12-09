@@ -3,26 +3,25 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable("tasks", {
-      task_id: {
-        type: Sequelize.INTEGER,
+      id: {
+        type: Sequelize.UUID,
         primaryKey: true,
-        autoIncrement: true,
       },
       user_id: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.UUID,
         allowNull: false,
         references: {
           model: "users",
-          key: "user_id",
+          key: "id",
         },
         onDelete: "CASCADE",
       },
       list_id: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.UUID,
         allowNull: true,
         references: {
           model: "lists",
-          key: "list_id",
+          key: "id",
         },
         onDelete: "SET NULL",
       },
