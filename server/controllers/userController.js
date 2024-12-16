@@ -9,7 +9,7 @@ const hashPassword = async function (password) {
   return hash;
 };
 
-export const checkAndCreateUser = async (req, res, next) => {
+export const userExistMiddleware = async (req, res, next) => {
   const { username, email } = req.body;
   try {
     // Check if a user with the given username or email exists
@@ -58,7 +58,7 @@ export const createUserController = async (req, res) => {
     res.status(codes.INTERNAL_SERVER_ERROR).send(
       requestResponseFormatter("error", {
         code: codes.INTERNAL_SERVER_ERROR,
-        message: `Something went wrong ${error.message}`,
+        message: `Something went wrong : ${error.message}`,
       })
     );
   }
