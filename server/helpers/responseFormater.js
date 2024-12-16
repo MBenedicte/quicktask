@@ -32,3 +32,6 @@ export const queryResponsesFormatter = (type, data) => ({
   type,
   data: type === "error" ? { cause: data.cause, message: data.message } : data,
 });
+
+"success", {id:"gvdgvcehr"}
+"error", {cause: "cause" ,message: "" }
