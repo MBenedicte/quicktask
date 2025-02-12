@@ -11,6 +11,8 @@ export const requestResponseFormatter = (type, payload) => {
     response.data = payload.data;
     response.message = payload.message;
     response.status = payload.status;
+    response.code = payload.code;
+    response.token = payload.token;
   } else {
     response.status = payload.status;
     response.error = {
